@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Kontakt</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="preise.html">Preise</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="background">
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Füllen Sie das Formular aus oder nutzen Sie die unten angegebenen Informationen, um uns zu kontaktieren.</p>
+            <div class="kontakt-info">
+                <address>
+                    <p>123 Musterstraße, 12345 Musterstadt</p>
+                    <p>Tel: 0123-456789</p>
+                    <p>Email: info@mnewcut.com</p>
+                </address>
+            </div>
+            <form id="kontaktformular" method="post" action="path/to/your/form/handler">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="nachricht">Nachricht:</label>
+                <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+
+                <input type="submit" value="Senden">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MNew Cut</p>
+    </footer>
+</body>
+</html>

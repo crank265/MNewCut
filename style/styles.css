@@ -1,0 +1,179 @@
+/* CSS Variables */
+:root {
+    --main-color: #FAFAFA; /* Light gray for text */
+    --accent-color: #3498DB; /* Light blue */
+    --background-color: rgba(42, 46, 50, 0.7); /* Darker transparency */
+    --header-bg-color: #2c3e50; /* Dark blue-gray, retained for the header */
+    --hover-color: #3498DB; /* Light blue for hover effects */
+    --bg-color: rgba(0, 0, 0, 0.7); /* Darker general background color */
+    --header-height: 60px;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/background.jpg'); /* Assumes a relevant image file exists */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-color);
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    height: var(--header-height);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+nav li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecf0f1; 
+    font-weight: bold;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+}
+
+nav li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--hover-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Section Styles */
+section {
+    padding: 50px;
+    background-color: var(--background-color); 
+    margin-top: 60px;
+    color: var(--main-color); 
+}
+
+/* Table Styles */
+.table-container {
+    margin: 0 auto;
+    overflow: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: var(--bg-color); 
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table th,
+.modern-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modern-table th {
+    background-color: var(--header-bg-color); 
+    color: white;
+}
+
+/* Contact Form Styles */
+#kontakt address,
+#kontakt form {
+    margin-bottom: 20px;
+}
+
+#kontakt label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#kontakt input,
+#kontakt textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#kontakt input[type="submit"] {
+    background-color: var(--accent-color); 
+    color: var(--main-color);
+}
+
+#kontakt input[type="submit"]:hover {
+    background-color: #3075A8; 
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--bg-color); 
+    color: var(--main-color); 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    section {
+        padding: 20px;
+    }
+    .table-container, .modern-table th, .modern-table td {
+        font-size: 0.875em; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet-specific styles, if needed */
+}
+
+@media (min-width: 1025px) {
+    /* Desktop-specific styles, if needed */
+}
